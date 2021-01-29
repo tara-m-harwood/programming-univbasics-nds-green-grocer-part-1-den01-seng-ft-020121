@@ -76,7 +76,7 @@ end
 
 # testy(unconsolidated_cart)
 
-# consolidate_cart(unconsolidated_cart)
+consolidate_refactor(unconsolidated_cart)
 
 # consolidate_cart(unconsolidated_cart)
  
