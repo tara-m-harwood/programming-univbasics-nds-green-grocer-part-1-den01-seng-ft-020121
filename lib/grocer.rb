@@ -54,29 +54,8 @@ def consolidate_cart(cart)
   return entries
 end  
 
-def consolidate_refactor(cart)
-  entries = [] #inits variable for consolidated cart
-
-  cart.each do | cart_item | #loops over the cart items
-    if entries[:item].include?(cart_item[:item]) # checks if we have an entry key for this item
-      found_item = entries.find { | line_item | line_item[:item] == cart_item[:item] } #if found, returns the entry line_item
-      found_item[:count] += 1 # increments the count
-      p cart_item[:item] + " duplicate found"
-      p found_item
-    else # if there is no entry
-      cart_item[:count] = 1 # sets the initial count at 1
-      entries << cart_item # adds the item hash to the consolidated cart 
-
-      p cart_item[:item] + " new"
-    end
-  end
-  p entries
-  return entries
-end 
 
 # testy(unconsolidated_cart)
 
-# consolidate_cart(unconsolidated_cart)
-
-# consolidate_cart(unconsolidated_cart)
+consolidate_cart(unconsolidated_cart)
  
